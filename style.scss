@@ -1,37 +1,136 @@
-$couleur_primaire:rgb(101, 196, 120);
-$couleur_secondaire:rgb(115, 233, 12);
+
+/* Import de la font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Import de la font Shrikhand */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+$couleur_primaire:#9356DC;
+$couleur_secondaire:#FF79DA;
+$couleur_tertiaire:#99E2D0;
+
+$fontLogoTitre: 'Shrikhand',cursive ,sans-serif;
+$fontText:'Roboto', sans-serif;
+
+
+@mixin center{
+    display:flex;
+    justify-content: center;
+    align-items:center  ;
+}
 
 
 body{
     margin: 0;
+    font-family:$fontText; 
 }
 
-.box{
+/* Header */
+header{
+    @include center;
+    width: 100vw;
+    height:60px;
+    background-color: white;
+    h1{
+        font-family:$fontLogoTitre ;
+        font-size: 30px;
+        margin: 0;
+    }
+}
+
+/* Div localisation */
+.location{
+    @include center;
+    background-color:#EAEAEA ;
+    height: 40px;
+    i{
+        margin-right: 10px;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+/* Section Reserver */
+#sectionreserver{
+    @include center;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    padding: 40px 10%;
+    gap: 20px;
+    h2{
+        font-size: 22px;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+    }
+    p{
+        margin: 0;
+        text-align: center;
+        font-weight: 300;
+    }
+    a{
+        background:linear-gradient(to bottom,$couleur_secondaire,$couleur_primaire) ;
+        display: block;
+        padding: 15px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        &:hover{
+            opacity: .9;
+        }
+    }
+}
+
+/* Section Fonctionnement */
+#sectionfonctionnement{
+    padding: 20px 8%;
+    background-color: white;
+    h2{
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+
+.boxfonctionnement{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid $couleur_primaire 2px;
-    width: auto;
-    padding: 10px 10px;
-    width: 400px;
-    margin: 10px 0 0 10px;
-}
-p{
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    gap: 20px;
 }
 
-button{
-    border: none;
-    background-color: $couleur_primaire;
-    cursor: pointer;
-    width: 50%;
+.cartefonctionnement{
+    transition: .3s;
     padding: 10px 0;
-    font-family:  'New', Courier, monospace;
-    color: white;
-
-    &:hover{ /* Le & ici permet de séléctionner le sélécteur précédent, ici button */
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #F6F6F6;
+    width: 100%;
+    font-weight: 500;
+    padding: 25px 0;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    @include center;
+    position: relative;
+    i{
+        color: #7E7E7E;
+        margin-right: 20px;
+        font-size: 20px;
     }
-
+    .numero{
+        @include center;
+        color: white;
+        border-radius: 15px;
+        height: 25px;
+        width: 25px;
+        background-color: $couleur_primaire;
+        position: absolute;
+        left: calc(-25px / 2);
+        font-size: 13px;
+    }
+    &:hover{
+        background-color: #F5EDFF;
+        i{
+            color: $couleur_primaire;
+        }
+    }
 }

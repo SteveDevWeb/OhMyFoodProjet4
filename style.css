@@ -1,33 +1,128 @@
-@charset "UTF-8";
+/* Import de la font Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Import de la font Shrikhand */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  background-color: white;
+}
+header h1 {
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-size: 30px;
   margin: 0;
 }
 
-.box {
+/* Div localisation */
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  height: 40px;
+}
+.location i {
+  margin-right: 10px;
+}
+.location p {
+  margin: 0;
+}
+
+/* Section Reserver */
+#sectionreserver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  padding: 40px 10%;
+  gap: 20px;
+}
+#sectionreserver h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+#sectionreserver p {
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+}
+#sectionreserver a {
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  display: block;
+  padding: 15px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#sectionreserver a:hover {
+  opacity: 0.9;
+}
+
+/* Section Fonctionnement */
+#sectionfonctionnement {
+  padding: 20px 8%;
+  background-color: white;
+}
+#sectionfonctionnement h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.boxfonctionnement {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid rgb(101, 196, 120) 2px;
-  width: auto;
-  padding: 10px 10px;
-  width: 400px;
-  margin: 10px 0 0 10px;
+  gap: 20px;
 }
 
-p {
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-}
-
-button {
-  border: none;
-  background-color: rgb(101, 196, 120);
-  cursor: pointer;
-  width: 50%;
+.cartefonctionnement {
+  transition: 0.3s;
   padding: 10px 0;
-  font-family: "New", Courier, monospace;
-  color: white;
+  background-color: #F6F6F6;
+  width: 100%;
+  font-weight: 500;
+  padding: 25px 0;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-button:hover { /* Le & ici permet de séléctionner le sélécteur précédent, ici button */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.cartefonctionnement i {
+  color: #7E7E7E;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.cartefonctionnement .numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 15px;
+  height: 25px;
+  width: 25px;
+  background-color: #9356DC;
+  position: absolute;
+  left: -12.5px;
+  font-size: 13px;
+}
+.cartefonctionnement:hover {
+  background-color: #F5EDFF;
+}
+.cartefonctionnement:hover i {
+  color: #9356DC;
 }/*# sourceMappingURL=style.css.map */
