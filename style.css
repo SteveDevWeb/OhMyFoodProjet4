@@ -1,0 +1,33 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid rgb(101, 196, 120) 2px;
+  width: auto;
+  padding: 10px 10px;
+  width: 400px;
+  margin: 10px 0 0 10px;
+}
+
+p {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+button {
+  border: none;
+  background-color: rgb(101, 196, 120);
+  cursor: pointer;
+  width: 50%;
+  padding: 10px 0;
+  font-family: "New", Courier, monospace;
+  color: white;
+}
+button:hover { /* Le & ici permet de séléctionner le sélécteur précédent, ici button */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}/*# sourceMappingURL=style.css.map */
