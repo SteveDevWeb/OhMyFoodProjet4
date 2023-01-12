@@ -15,6 +15,7 @@ header {
   width: 100vw;
   height: 60px;
   background-color: white;
+  position: relative;
 }
 header h1 {
   font-family: "Shrikhand", cursive, sans-serif;
@@ -217,4 +218,13 @@ footer a {
 }
 footer a i {
   margin-right: 10px;
+}
+
+/* La Palette du Gout */
+header > a > i {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 5%;
+  top: 40%;
 }/*# sourceMappingURL=style.css.map */

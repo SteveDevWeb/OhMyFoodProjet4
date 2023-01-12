@@ -34,6 +34,7 @@ header{
     width: 100vw;
     height:60px;
     background-color: white;
+    position: relative;
     h1{
         font-family:$fontLogoTitre ;
         font-size: 30px;
@@ -230,4 +231,21 @@ footer{
         }
     }
 
+}
+
+
+
+
+
+
+
+
+/* La Palette du Gout */
+
+header > a > i{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 5%;
+    top:40%;
 }
