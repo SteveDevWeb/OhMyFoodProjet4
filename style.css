@@ -194,4 +194,27 @@ header h1 {
   top: 35%;
   right: 7%;
   font-size: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+}
+footer h2 {
+  margin: 0 0 10px 0;
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+}
+footer a i {
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
