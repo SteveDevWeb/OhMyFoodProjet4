@@ -20,6 +20,9 @@ $fontText:'Roboto', sans-serif;
 }
 
 
+
+
+
 body{
     margin: 0;
     font-family:$fontText; 
@@ -85,11 +88,12 @@ header{
 
 /* Section Fonctionnement */
 #sectionfonctionnement{
-    padding: 20px 8%;
+    padding: 30px 8%;
     background-color: white;
     h2{
         font-size: 22px;
-        font-weight: 500;
+        font-weight: 600;
+        margin: 0 0 20px 0;
     }
 }
 
@@ -102,11 +106,10 @@ header{
 
 .cartefonctionnement{
     transition: .3s;
-    padding: 10px 0;
+    padding: 25px 0;
     background-color: #F6F6F6;
     width: 100%;
     font-weight: 500;
-    padding: 25px 0;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
     @include center;
@@ -132,5 +135,74 @@ header{
         i{
             color: $couleur_primaire;
         }
+    }
+}
+
+
+
+
+/* Section Restaurant */
+#sectionrestaurant{
+    padding: 30px 8%;
+    background-color: #F6F6F6;
+    h2{
+        font-size: 22px;
+        font-weight: 600;
+        margin: 0 0 20px 0;
+    }
+}
+
+.boxrestaurants{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.carterestaurant{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    img{
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    .infoscarterestaurant{
+        padding: 20px 15px;
+        position: relative;
+    }
+    h3{
+        margin: 0 0 5px 0;
+        font-weight: 600;
+    }
+    h4{
+        margin: 0;
+        font-weight: 300;
+    }
+    .nouveau{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        @include center;
+        background-color:$couleur_tertiaire ;
+        padding: 7px 12px;
+        color: #008766;
+        border-radius: 3px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    i{
+        position: absolute;
+        top:35%;
+        right: 7%;
+        font-size: 20px;
     }
 }
