@@ -1,56 +1,12 @@
-
-/* Import de la font Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-/* Import de la font Shrikhand */
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
-$couleur_primaire:#9356DC;
-$couleur_secondaire:#FF79DA;
-$couleur_tertiaire:#99E2D0;
-
-$fontLogoTitre: 'Shrikhand',cursive ,sans-serif;
-$fontText:'Roboto', sans-serif;
-
-
-@mixin center{
-    display:flex;
-    justify-content: center;
-    align-items:center  ;
-}
-
-
-
-
+@import"./SCSS/Utils/_variables.scss";
+@import"./SCSS/Utils/_mixins.scss";
+@import"./SCSS/Base/_font.scss";
+@import"./SCSS/Layout/_header.scss";
+@import"./SCSS/Layout/_footer.scss";
 
 body{
     margin: 0;
     font-family:$fontText; 
-}
-
-/* Header */
-header{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    h1{
-        @include center;
-        width: 100vw;
-        height:60px;
-        background-color: white;
-        font-family:$fontLogoTitre ;
-        font-size: 30px;
-        margin: 0;
-    }
-    .location{
-        @include center;
-        background-color:#EAEAEA ;
-        height: 40px;
-        margin: 0;
-        i{
-            margin-right: 10px;
-        }
-    }
 }
 
 /* Section Reserver */
@@ -86,7 +42,7 @@ header{
 }
 
 /* Section Fonctionnement */
-#sectionfonctionnement{
+#fonctionnement{
     padding: 30px 8%;
     background-color: white;
     h2{
@@ -97,11 +53,11 @@ header{
 }
 
 .boxfonctionnement{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
     padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 30px;
 }
 
 .cartefonctionnement{
@@ -109,7 +65,6 @@ header{
     padding: 25px 0;
     background-color: #F6F6F6;
     width: 100%;
-    font-weight: 500;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
     @include center;
@@ -118,6 +73,12 @@ header{
         color: #7E7E7E;
         margin-right: 20px;
         font-size: 20px;
+    }
+    h3{
+        margin: 0;
+        font-size: 17px;
+        font-weight: 500;
+
     }
     .numero{
         @include center;
@@ -142,7 +103,7 @@ header{
 
 
 /* Section Restaurant */
-#sectionrestaurant{
+#restaurant{
     padding: 30px 8%;
     background-color: #F6F6F6;
     h2{
@@ -150,13 +111,11 @@ header{
         font-weight: 600;
         margin: 0 0 20px 0;
     }
-}
-
-.boxrestaurants{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    .restaurant-box{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-gap: 30px;
+    }
 }
 
 .carterestaurant{
@@ -175,7 +134,7 @@ header{
         object-fit: cover;
         border-radius: 20px 20px 0 0;
     }
-    .infoscarterestaurant{
+    &-info{
         padding: 20px 15px;
         position: relative;
     }
@@ -205,52 +164,4 @@ header{
         right: 7%;
         font-size: 20px;
     }
-}
-
-
-/* Footer */
-footer{
-    background-color: #353535;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 25px;
-    h2{
-        margin: 0 0 10px 0;
-        font-family: $fontLogoTitre;
-        font-size: 20px;
-        font-weight: 100;
-    }
-    ul{
-        margin: 0;
-        padding: 0;
-        li{
-            list-style-type: none;
-            margin-top: 10px;
-            a{
-                text-decoration: none;
-                color: white;
-                i{
-                    margin-right: 10px;
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-/* La Palette du Gout */
-
-header > a > i{
-    text-decoration: none;
-    color: black;
-    position: absolute;
-    left: 5%;
-    top:40%;
 }

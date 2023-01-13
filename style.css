@@ -1,13 +1,5 @@
-/* Import de la font Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/* Import de la font Shrikhand */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-/* Header */
 header {
   position: relative;
   display: flex;
@@ -34,6 +26,54 @@ header .location {
 }
 header .location i {
   margin-right: 10px;
+}
+
+/* Style bouton header pour les pages restaurant */
+header > a > i {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 5%;
+  top: 40%;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+}
+footer h2 {
+  margin: 0 0 10px 0;
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  list-style-type: none;
+  margin-top: 10px;
+}
+footer ul li a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+footer ul li a h3 {
+  margin: 0;
+  font-size: 15px;
+}
+footer ul li a i {
+  margin-right: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Section Reserver */
@@ -71,22 +111,22 @@ header .location i {
 }
 
 /* Section Fonctionnement */
-#sectionfonctionnement {
+#fonctionnement {
   padding: 30px 8%;
   background-color: white;
 }
-#sectionfonctionnement h2 {
+#fonctionnement h2 {
   font-size: 22px;
   font-weight: 600;
   margin: 0 0 20px 0;
 }
 
 .boxfonctionnement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
   padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
 }
 
 .cartefonctionnement {
@@ -94,7 +134,6 @@ header .location i {
   padding: 25px 0;
   background-color: #F6F6F6;
   width: 100%;
-  font-weight: 500;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
   display: flex;
@@ -106,6 +145,11 @@ header .location i {
   color: #7E7E7E;
   margin-right: 20px;
   font-size: 20px;
+}
+.cartefonctionnement h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
 }
 .cartefonctionnement .numero {
   display: flex;
@@ -128,21 +172,19 @@ header .location i {
 }
 
 /* Section Restaurant */
-#sectionrestaurant {
+#restaurant {
   padding: 30px 8%;
   background-color: #F6F6F6;
 }
-#sectionrestaurant h2 {
+#restaurant h2 {
   font-size: 22px;
   font-weight: 600;
   margin: 0 0 20px 0;
 }
-
-.boxrestaurants {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+#restaurant .restaurant-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
 }
 
 .carterestaurant {
@@ -163,7 +205,7 @@ header .location i {
      object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.carterestaurant .infoscarterestaurant {
+.carterestaurant-info {
   padding: 20px 15px;
   position: relative;
 }
@@ -194,43 +236,4 @@ header .location i {
   top: 35%;
   right: 7%;
   font-size: 20px;
-}
-
-/* Footer */
-footer {
-  background-color: #353535;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 25px;
-}
-footer h2 {
-  margin: 0 0 10px 0;
-  font-family: "Shrikhand", cursive, sans-serif;
-  font-size: 20px;
-  font-weight: 100;
-}
-footer ul {
-  margin: 0;
-  padding: 0;
-}
-footer ul li {
-  list-style-type: none;
-  margin-top: 10px;
-}
-footer ul li a {
-  text-decoration: none;
-  color: white;
-}
-footer ul li a i {
-  margin-right: 10px;
-}
-
-/* La Palette du Gout */
-header > a > i {
-  text-decoration: none;
-  color: black;
-  position: absolute;
-  left: 5%;
-  top: 40%;
 }/*# sourceMappingURL=style.css.map */

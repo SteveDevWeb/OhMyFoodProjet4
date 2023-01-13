@@ -1,0 +1,35 @@
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    h1{
+        @include center;
+        width: 100vw;
+        height:60px;
+        background-color: white;
+        font-family:$fontLogoTitre ;
+        font-size: 30px;
+        margin: 0;
+    }
+    .location{
+        @include center;
+        background-color:#EAEAEA ;
+        height: 40px;
+        margin: 0;
+        i{
+            margin-right: 10px;
+        }
+    }
+}
+
+
+
+/* Style bouton header pour les pages restaurant */
+
+header > a > i{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 5%;
+    top:40%;
+}
