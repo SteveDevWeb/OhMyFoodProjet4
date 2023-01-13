@@ -30,28 +30,26 @@ body{
 
 /* Header */
 header{
-    @include center;
-    width: 100vw;
-    height:60px;
-    background-color: white;
     position: relative;
+    display: flex;
+    flex-direction: column;
     h1{
+        @include center;
+        width: 100vw;
+        height:60px;
+        background-color: white;
         font-family:$fontLogoTitre ;
         font-size: 30px;
         margin: 0;
     }
-}
-
-/* Div localisation */
-.location{
-    @include center;
-    background-color:#EAEAEA ;
-    height: 40px;
-    i{
-        margin-right: 10px;
-    }
-    p{
+    .location{
+        @include center;
+        background-color:#EAEAEA ;
+        height: 40px;
         margin: 0;
+        i{
+            margin-right: 10px;
+        }
     }
 }
 
@@ -103,6 +101,7 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 0;
 }
 
 .cartefonctionnement{
@@ -184,7 +183,7 @@ header{
         margin: 0 0 5px 0;
         font-weight: 600;
     }
-    h4{
+    p{
         margin: 0;
         font-weight: 300;
     }
@@ -222,15 +221,21 @@ footer{
         font-size: 20px;
         font-weight: 100;
     }
-    a{
-        text-decoration: none;
-        color: white;
-        margin-top: 10px;
-        i{
-            margin-right: 10px;
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style-type: none;
+            margin-top: 10px;
+            a{
+                text-decoration: none;
+                color: white;
+                i{
+                    margin-right: 10px;
+                }
+            }
         }
     }
-
 }
 
 

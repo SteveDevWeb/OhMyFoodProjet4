@@ -7,38 +7,32 @@
     <!-- Import des icones Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="style.css">
-    <title>OhMyFood</title>
+    <title>Test</title>
 </head>
 <body>  
     <header>
-        <h1>ohmyfoodFOOD</h1>
+        <h1>ohmyfood</h1>
+        <p class="location"><i class="fa-sharp fa-solid fa-location-dot"></i>Paris, Belleville</p>
     </header>
-
-    <div class="location">
-        <p><i class="fa-sharp fa-solid fa-location-dot"></i>Paris, Belleville</p>
-    </div>
-
-
     <section id="sectionreserver">
         <h2>Réservez le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
         <a href="#sectionrestaurant">Explorez nos restaurants</a>
     </section>
 
-
     <section id="sectionfonctionnement">
         <h2>Fonctionnement</h2>
-        <div class="boxfonctionnement">
-            <div class="cartefonctionnement"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant
+        <ol class="boxfonctionnement">
+            <li class="cartefonctionnement"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant
                 <div class="numero">1</div>
-            </div>
-            <div class="cartefonctionnement"><i class="fa-solid fa-list"></i></i>Composez votre menu
+            </li>
+            <li class="cartefonctionnement"><i class="fa-solid fa-list"></i></i>Composez votre menu
                 <div class="numero">2</div>
-            </div>
-            <div class="cartefonctionnement"><i class="fa-sharp fa-solid fa-store"></i></i>Dégustez au restaurant
+            </li>
+            <li class="cartefonctionnement"><i class="fa-sharp fa-solid fa-store"></i></i>Dégustez au restaurant
                 <div class="numero">3</div>
-            </div>
-        </div>
+            </li>
+        </ol>
     </section>
 
 
@@ -50,7 +44,7 @@
                 <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                 <div class="infoscarterestaurant">
                     <h3>La palette du goût</h3>
-                    <h4>Ménilmontant</h4>
+                    <p>Ménilmontant</p>
                     <i class="fa-regular fa-heart"></i>
                 </div>
                 <div class="nouveau">Nouveau</div> 
@@ -59,7 +53,7 @@
                 <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
                 <div class="infoscarterestaurant">
                     <h3>La note enchantée</h3>
-                    <h4>Charonne</h4>
+                    <p>Charonne</p>
                     <i class="fa-regular fa-heart"></i>
                 </div>
                 <div class="nouveau">Nouveau</div> 
@@ -68,7 +62,7 @@
                 <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
                 <div class="infoscarterestaurant">
                     <h3>À la française</h3>
-                    <h4>Cité Rouge</h4>
+                    <p>Cité Rouge</p>
                     <i class="fa-regular fa-heart"></i>
                 </div>
                 <div class="nouveau">Nouveau</div> 
@@ -77,7 +71,7 @@
                 <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
                 <div class="infoscarterestaurant">
                     <h3>Le délice des sens</h3>
-                    <h4>Foli-Méricourt</h4>
+                    <p>Foli-Méricourt</p>
                     <i class="fa-regular fa-heart"></i>
                 </div>
                 <div class="nouveau">Nouveau</div> 
@@ -88,10 +82,12 @@
 
     <footer>
         <h2>ohmyfood</h2>
-        <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-        <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </footer>
 
 

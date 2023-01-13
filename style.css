@@ -9,33 +9,31 @@ body {
 
 /* Header */
 header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 60px;
   background-color: white;
-  position: relative;
-}
-header h1 {
   font-family: "Shrikhand", cursive, sans-serif;
   font-size: 30px;
   margin: 0;
 }
-
-/* Div localisation */
-.location {
+header .location {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #EAEAEA;
   height: 40px;
-}
-.location i {
-  margin-right: 10px;
-}
-.location p {
   margin: 0;
+}
+header .location i {
+  margin-right: 10px;
 }
 
 /* Section Reserver */
@@ -88,6 +86,7 @@ header h1 {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  padding: 0;
 }
 
 .cartefonctionnement {
@@ -172,7 +171,7 @@ header h1 {
   margin: 0 0 5px 0;
   font-weight: 600;
 }
-.carterestaurant h4 {
+.carterestaurant p {
   margin: 0;
   font-weight: 300;
 }
@@ -211,12 +210,19 @@ footer h2 {
   font-size: 20px;
   font-weight: 100;
 }
-footer a {
-  text-decoration: none;
-  color: white;
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  list-style-type: none;
   margin-top: 10px;
 }
-footer a i {
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer ul li a i {
   margin-right: 10px;
 }
 
