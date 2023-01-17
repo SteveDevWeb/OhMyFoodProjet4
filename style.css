@@ -71,6 +71,13 @@ footer ul li a i {
   margin-right: 10px;
 }
 
+.imgpresentation {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 50vh;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -183,7 +190,7 @@ body {
 }
 #restaurant .restaurant-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 30px;
 }
 

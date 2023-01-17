@@ -3,6 +3,7 @@
 @import"./SCSS/Base/_font.scss";
 @import"./SCSS/Layout/_header.scss";
 @import"./SCSS/Layout/_footer.scss";
+@import "./SCSS/Pages/_LaPaletteDuGout.scss";
 
 body{
     margin: 0;
@@ -113,7 +114,7 @@ body{
     }
     .restaurant-box{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
         grid-gap: 30px;
     }
 }
