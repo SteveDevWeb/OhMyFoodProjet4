@@ -100,14 +100,13 @@ main {
   z-index: 1;
   margin-top: 45vh;
 }
+.container h2 {
+  font-family: "Shrikhand", cursive, sans-serif;
+  margin-bottom: 30px;
+}
 
 p, h2, h3, h4 {
   margin: 0;
-}
-
-h2 {
-  font-family: "Shrikhand", cursive, sans-serif;
-  margin-bottom: 30px;
 }
 
 .line {
@@ -135,15 +134,24 @@ h2 {
 }
 .food-card h4 {
   font-size: 20px;
-  font-size: calc(14px + 0.3vw);
+  font-size: calc(16px + 0.2vw);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
-.food-card p {
-  font-size: calc(12px + 0.3vw);
+.food-card .divlinewebkit {
+  justify-content: space-between;
+  display: flex;
 }
-.food-card .prix {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+.food-card .divlinewebkit p {
+  font-size: calc(14px + 0.2vw);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.food-card .divlinewebkit p .prix {
   font-weight: 500;
   padding-left: 5px;
   border-left: 1px solid black;
@@ -161,13 +169,127 @@ h2 {
 }
 .btn-commander:hover {
   opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
 }
 
+.delayentree {
+  -webkit-animation-name: apparition;
+          animation-name: apparition;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.delayplat {
+  -webkit-animation-name: apparition;
+          animation-name: apparition;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.delaydessert {
+  -webkit-animation-name: apparition;
+          animation-name: apparition;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes apparition {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes apparition {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
+/* Loader */
+.pageloader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -10;
+  -webkit-animation-name: arret;
+          animation-name: arret;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.pageloader .loader {
+  border: 16px solid #F6F6F6;
+  width: 100px;
+  height: 100px;
+  border-top-color: #9356DC;
+  border-bottom-color: #FF79DA;
+  border-radius: 50%;
+  -webkit-animation-name: chargeur;
+          animation-name: chargeur;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: fixed;
+  bottom: calc(50% - 50px - 16px);
+  right: calc(50% - 50px - 16px);
+}
+
+@-webkit-keyframes chargeur {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes chargeur {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes arret {
+  from {
+    z-index: 10;
+  }
+  to {
+    z-index: 10;
+  }
+}
+@keyframes arret {
+  from {
+    z-index: 10;
+  }
+  to {
+    z-index: 10;
+  }
+}
 /* Section Reserver */
 #sectionreserver {
   display: flex;
@@ -200,6 +322,7 @@ body {
 }
 #sectionreserver a:hover {
   opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
 }
 
 /* Section Fonctionnement */
