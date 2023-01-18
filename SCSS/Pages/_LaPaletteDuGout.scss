@@ -4,6 +4,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     z-index: 4;
 }
 .imgpresentation{
@@ -15,6 +16,7 @@ main{
 }
 
 .container{
+    max-width: 800px;
     width: calc(100% - 10%);
     background-color: #F6F6F6;
     display: flex;
@@ -49,41 +51,62 @@ p,h2,h3,h4{
     }
     &-card{
         background-color: white;
-        width:calc(100% - 40px);
+        width:100%;
         margin-bottom: 10px;
-        padding: 15px 20px;
         border-radius: 20px;
         position: relative;
-        h4{
-            font-size:20px ;
-            font-size: calc(16px + .2vw);
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
+        justify-content: space-between;
+        display: flex;
+        overflow:hidden;
+        &:hover{
+            
         }
         .divlinewebkit{
-            justify-content: space-between;
-            display: flex;
+            margin: 10px 0 10px 15px;
+            h4{
+                font-size:20px ;
+                font-size: calc(16px + .2vw);
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+            }
             p{
                 font-size: calc(14px + .2vw);
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 1;
                 overflow: hidden;
-                .prix{
-                    font-weight: 500;
-                    padding-left: 5px;
-                    border-left: 1px solid black;
-                }
+            }
+        }
+        .decalage{
+            display: flex;
+            .prix{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                font-weight: 500;
+                padding-left: 15px;
+                margin-bottom: 10px;
+            } 
+            .check{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: calc(100% - 30px);
+                background-color: $couleur_tertiaire;
+                padding: 15px 25px;
+                margin-left:15px;
+                border-radius: 0 20px 20px 0;
 
-        }
-        }
+                i{
+                    color: white;
+                }
+            }
+        }    
     }
 }
-
-
-
 
 
 
@@ -115,18 +138,21 @@ p,h2,h3,h4{
     animation-duration: 1s;
     animation-delay: 0s;
     animation-iteration-count: 1;
+    animation-fill-mode: none;
 }
 .delayplat{
     animation-name: apparition;
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 .delaydessert{
     animation-name: apparition;
     animation-duration: 1s;
     animation-delay: 1s;
     animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
 

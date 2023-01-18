@@ -9,7 +9,7 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   background-color: white;
   font-family: "Shrikhand", cursive, sans-serif;
@@ -78,6 +78,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   z-index: 4;
 }
 
@@ -91,6 +92,7 @@ main {
 }
 
 .container {
+  max-width: 800px;
   width: 90%;
   background-color: #F6F6F6;
   display: flex;
@@ -126,23 +128,24 @@ p, h2, h3, h4 {
 }
 .food-card {
   background-color: white;
-  width: calc(100% - 40px);
+  width: 100%;
   margin-bottom: 10px;
-  padding: 15px 20px;
   border-radius: 20px;
   position: relative;
+  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
 }
-.food-card h4 {
+.food-card .divlinewebkit {
+  margin: 10px 0 10px 15px;
+}
+.food-card .divlinewebkit h4 {
   font-size: 20px;
   font-size: calc(16px + 0.2vw);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
-}
-.food-card .divlinewebkit {
-  justify-content: space-between;
-  display: flex;
 }
 .food-card .divlinewebkit p {
   font-size: calc(14px + 0.2vw);
@@ -151,10 +154,30 @@ p, h2, h3, h4 {
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
-.food-card .divlinewebkit p .prix {
+.food-card .decalage {
+  display: flex;
+}
+.food-card .decalage .prix {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   font-weight: 500;
-  padding-left: 5px;
-  border-left: 1px solid black;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+.food-card .decalage .check {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 30px);
+  background-color: #99E2D0;
+  padding: 15px 25px;
+  margin-left: 15px;
+  border-radius: 0 20px 20px 0;
+}
+.food-card .decalage .check i {
+  color: white;
 }
 
 .btn-commander {
@@ -181,6 +204,8 @@ p, h2, h3, h4 {
           animation-delay: 0s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 
 .delayplat {
@@ -192,6 +217,8 @@ p, h2, h3, h4 {
           animation-delay: 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .delaydessert {
@@ -203,6 +230,8 @@ p, h2, h3, h4 {
           animation-delay: 1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 @-webkit-keyframes apparition {
