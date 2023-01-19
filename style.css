@@ -136,6 +136,10 @@ p, h2, h3, h4 {
   display: flex;
   overflow: hidden;
 }
+.food-card:hover .decalage {
+  -webkit-animation: decalagegauche 0.3s linear 0s 1 both;
+          animation: decalagegauche 0.3s linear 0s 1 both;
+}
 .food-card .divlinewebkit {
   margin: 10px 0 10px 15px;
 }
@@ -156,6 +160,9 @@ p, h2, h3, h4 {
 }
 .food-card .decalage {
   display: flex;
+  margin-right: -66px;
+  -webkit-animation: decalagedroite 0.3s linear 0s 1 both;
+          animation: decalagedroite 0.3s linear 0s 1 both;
 }
 .food-card .decalage .prix {
   display: flex;
@@ -249,6 +256,38 @@ p, h2, h3, h4 {
   }
   to {
     transform: scale(1);
+  }
+}
+@-webkit-keyframes decalagegauche {
+  from {
+    margin-right: -66px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@keyframes decalagegauche {
+  from {
+    margin-right: -66px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@-webkit-keyframes decalagedroite {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: -66px;
+  }
+}
+@keyframes decalagedroite {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: -66px;
   }
 }
 body {

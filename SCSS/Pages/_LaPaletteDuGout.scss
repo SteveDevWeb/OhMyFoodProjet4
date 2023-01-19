@@ -59,7 +59,9 @@ p,h2,h3,h4{
         display: flex;
         overflow:hidden;
         &:hover{
-            
+            .decalage{
+                animation: decalagegauche .3s linear 0s 1 both;
+            }
         }
         .divlinewebkit{
             margin: 10px 0 10px 15px;
@@ -81,6 +83,8 @@ p,h2,h3,h4{
         }
         .decalage{
             display: flex;
+            margin-right:-66px;
+            animation: decalagedroite .3s linear 0s 1 both;
             .prix{
                 display: flex;
                 flex-direction: column;
@@ -163,5 +167,22 @@ p,h2,h3,h4{
     }
     to {
         transform: scale(1);
+    }
+}
+
+@keyframes decalagegauche {
+    from{
+        margin-right: -66px;
+    }
+    to{
+        margin-right: 0;
+    }
+}
+@keyframes decalagedroite {
+    from{
+        margin-right: 0;
+    }
+    to{
+        margin-right: -66px;
     }
 }
