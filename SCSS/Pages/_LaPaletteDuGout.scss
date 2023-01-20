@@ -28,6 +28,27 @@ main{
     h2{
         font-family:$fontLogoTitre;
         margin-bottom: 30px;
+        align-self: center;
+        position: relative;
+        i{
+            position: absolute;
+            right: -15%;
+            top: 15%;
+            font-size: 20px;
+        }
+        .fa-solid{
+            opacity: 0;
+            position: absolute;
+            transition: .5s;
+            &:hover{
+                cursor: pointer;
+                opacity: 1;
+                background:linear-gradient(to bottom,$couleur_secondaire,$couleur_primaire) ;
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        }
     }
 }
 
@@ -138,11 +159,12 @@ p,h2,h3,h4{
 
 
 .delayentree{
-    animation-name: apparition;
+   /*animation-name: apparition;
     animation-duration: 1s;
     animation-delay: 0s;
     animation-iteration-count: 1;
-    animation-fill-mode: none;
+    animation-fill-mode: both;*/
+    animation: apparition 1s 0s 1 both;
 }
 .delayplat{
     animation-name: apparition;
