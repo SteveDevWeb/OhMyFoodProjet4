@@ -1,0 +1,17 @@
+@import"../Utils/_mixins.scss";
+@import"../Utils/_variables.scss";
+
+.btn{
+    background:linear-gradient(to bottom,$couleur_secondaire,$couleur_primaire) ;
+    display: block;
+    padding: 15px 25px;
+    align-self: center;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &:hover{
+        opacity: .9;
+        box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+    }
+}

@@ -1,6 +1,4 @@
-body{
-    margin: 0;
-}
+
 main{
     display: flex;
     flex-direction: column;
@@ -36,6 +34,7 @@ main{
             top: 15%;
             font-size: 20px;
         }
+        /* Animation coeur */
         .fa-solid{
             opacity: 0;
             position: absolute;
@@ -52,15 +51,16 @@ main{
     }
 }
 
-p,h2,h3,h4{
-    margin: 0;
-}
+
 
 .line{
     border:$couleur_tertiaire 2px solid ;
     width: 45px;
     margin: 10px 0 ;
 }
+
+
+
 
 .food{
     margin-bottom: 20px;
@@ -84,6 +84,7 @@ p,h2,h3,h4{
                 animation: decalagegauche .3s linear 0s 1 both;
             }
         }
+        /* Partie gauche avec texte de la card */
         .divlinewebkit{
             margin: 10px 0 10px 15px;
             h4{
@@ -102,6 +103,7 @@ p,h2,h3,h4{
                 overflow: hidden;
             }
         }
+        /* Partie droite avec le prix + le check de la card */
         .decalage{
             display: flex;
             margin-right:-66px;
@@ -133,30 +135,31 @@ p,h2,h3,h4{
     }
 }
 
-
-
-
-
-
-
-.btn-commander{
-    align-self: center;
-    background:linear-gradient(to bottom,$couleur_secondaire,$couleur_primaire) ;
-    display: block;
-    padding: 15px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    &:hover{
-        opacity: .9;
-        box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+/* Keyframe pour le décalage du check */
+@keyframes decalagegauche {
+    from{
+        margin-right: -66px;
+    }
+    to{
+        margin-right: 0;
+    }
+}
+@keyframes decalagedroite {
+    from{
+        margin-right: 0;
+    }
+    to{
+        margin-right: -66px;
     }
 }
 
 
 
 
+
+
+
+/* Animation d'entrée pour les blocs entree plat dessert */
 
 .delayentree{
    /*animation-name: apparition;
@@ -181,8 +184,7 @@ p,h2,h3,h4{
     animation-fill-mode: both;
 }
 
-
-
+/* Keyframe apparition blocs */
 @keyframes apparition {
     from {
         transform: scale(0);
@@ -192,19 +194,3 @@ p,h2,h3,h4{
     }
 }
 
-@keyframes decalagegauche {
-    from{
-        margin-right: -66px;
-    }
-    to{
-        margin-right: 0;
-    }
-}
-@keyframes decalagedroite {
-    from{
-        margin-right: 0;
-    }
-    to{
-        margin-right: -66px;
-    }
-}

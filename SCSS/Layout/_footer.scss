@@ -1,3 +1,6 @@
+@import"../Utils/_mixins.scss";
+@import"../Utils/_variables.scss";
+
 footer{
     background-color: #353535;
     color: white;
@@ -29,5 +32,16 @@ footer{
                 }
             }
         }
+    }
+}
+
+
+@media only screen and(min-width:700px) {
+    footer ul{
+        display: flex;
+        justify-content: space-between;  
+        li:last-child{
+            margin-right: 10%;
+        }    
     }
 }
