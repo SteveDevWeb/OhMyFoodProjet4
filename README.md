@@ -22,7 +22,6 @@ suivre l’avancement et publier le site en ligne plus facilement.
 
 
 
-
 Livrables attendus:
 
 
